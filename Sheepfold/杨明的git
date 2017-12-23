@@ -1,0 +1,51 @@
+
+git
+	服务器	github
+			码云	国内
+
+	分布式
+
+
+安装
+	sudo apt install git
+管理
+	创建目录
+		git init 初始化仓库
+		仓库(工作区　　暂存区　　仓库)
+		git add file 将文件从工作区添加到暂存区
+		git commit -m "bala" 将暂存区全部内容提交到仓库
+		git status	查看git状态
+		git log	查看所有在仓库中的文件id
+		git reflog 查看所有提交过文件的id
+		
+		删除
+			工作区
+				rm 文件
+			<1>误删除
+				git checkout --file
+			<2>确定删除
+				git rm file
+				git commit -m ""
+		删除文件夹		
+		rm -rf 文件夹名
+
+远程同步
+	<1>github 申请账号	
+	<2>创建远程仓库
+		1). 已有本地仓库---->如何与远程仓库创建联系
+			先在github创建仓库
+			在本地生成公钥
+				ssh-keygon
+				在.ssh目录xxx.pub文件复制
+			进入本地仓库
+				git init
+				git remote add orogin git@github.com:zhangzongyan/download.git(远程仓库地址) 与你的远远程仓库建立联系@github.com:zhangzongyan/download.git这是老师的 自己的要去git网站上找		
+				git push -u origin master 之后执行这个命令将文件上传到你的仓库中 要输入你注册时留下的名字和密码不是帐号
+
+		2).只有远程仓库---->同步本地仓库
+			git clone git@github.com:zhangzongyan/download.git(远程仓库地址)
+			当完成上面的以后 就只要输入 git pull 同步就行了
+	
+分支/合并
+
+
